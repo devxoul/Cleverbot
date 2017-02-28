@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window.backgroundColor = .white
     window.makeKeyAndVisible()
 
-    window.rootViewController = ViewController()
+    window.rootViewController = UIViewController()
 
     self.window = window
     return true

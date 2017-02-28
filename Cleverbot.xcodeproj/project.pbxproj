@@ -10,7 +10,7 @@
 		0365BF901E65E9440039F7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0365BF881E65E9440039F7CE /* Assets.xcassets */; };
 		0365BF911E65E9440039F7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0365BF891E65E9440039F7CE /* LaunchScreen.storyboard */; };
 		0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365BF8C1E65E9440039F7CE /* AppDelegate.swift */; };
-		0366669B1E65EB6800508EFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666991E65EB6800508EFD /* ViewController.swift */; };
+		0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666991E65EB6800508EFD /* BaseViewController.swift */; };
 		0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366669D1E65EC0300508EFD /* ServiceProvider.swift */; };
 		036666A21E65ECAC00508EFD /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A11E65ECAC00508EFD /* ModelType.swift */; };
 		036666A41E65ECF600508EFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A31E65ECF600508EFD /* Message.swift */; };
@@ -25,7 +25,7 @@
 		0365BF8A1E65E9440039F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0365BF8C1E65E9440039F7CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0365BF8F1E65E9440039F7CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		036666991E65EB6800508EFD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		036666991E65EB6800508EFD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0366669D1E65EC0300508EFD /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		036666A11E65ECAC00508EFD /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		036666A31E65ECF600508EFD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		036666981E65EB6800508EFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				036666991E65EB6800508EFD /* ViewController.swift */,
+				036666991E65EB6800508EFD /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
 				036666A41E65ECF600508EFD /* Message.swift in Sources */,
 				036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */,
-				0366669B1E65EB6800508EFD /* ViewController.swift in Sources */,
+				0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */,
 				0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
