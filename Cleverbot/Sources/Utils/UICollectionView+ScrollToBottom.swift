@@ -17,9 +17,10 @@ extension UICollectionView {
   }
 
   func scrollToBottom(animated: Bool) {
-    guard self.contentSize.height > self.height, self.height > 0 else { return }
+    let scrollHeight = self.contentSize.height + self.contentInset.top + self.contentInset.bottom
+    guard scrollHeight > self.height, self.height > 0 else { return }
     let targetOffset = CGPoint(x: 0, y: self.contentSize.height + self.contentInset.bottom - self.height)
-    self.setContentOffset(targetOffset, animated: true)
+    self.setContentOffset(targetOffset, animated: animated)
   }
 
 }
