@@ -42,6 +42,7 @@ GEM
       netrc (= 0.7.8)
     cocoapods-try (1.1.0)
     colored (1.2)
+    colorize (0.8.1)
     escape (0.0.4)
     fourflusher (2.0.1)
     fuzzy_match (2.0.4)
@@ -52,6 +53,8 @@ GEM
     nanaimo (0.2.3)
     nap (1.1.0)
     netrc (0.7.8)
+    poeditor-cli (0.3.1)
+      colorize (~> 0.8)
     ruby-macho (0.2.6)
     thread_safe (0.3.6)
     tzinfo (1.2.2)
@@ -68,6 +71,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods
+  poeditor-cli
 
 BUNDLED WITH
    1.14.3
