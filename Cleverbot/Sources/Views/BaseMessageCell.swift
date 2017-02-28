@@ -8,6 +8,8 @@
 
 import UIKit
 
+import SwiftyImage
+
 class BaseMessageCell: BaseCollectionViewCell {
 
   // MARK: Types
@@ -28,7 +30,7 @@ class BaseMessageCell: BaseCollectionViewCell {
   fileprivate struct Metric {
     static let bubbleViewMaximumWidth = ceil(UIScreen.main.bounds.width * 2 / 3)
     static let messageLabelTopBottom = 10.f
-    static let messageLabelLeftRight = 10.f
+    static let messageLabelLeftRight = 12.f
   }
 
   fileprivate struct Font {
@@ -43,7 +45,7 @@ class BaseMessageCell: BaseCollectionViewCell {
 
   // MARK: UI
 
-  fileprivate let bubbleView = UIView()
+  fileprivate let bubbleView = UIImageView()
   fileprivate let messageLabel = UILabel().then {
     $0.font = Font.messageLabel
     $0.numberOfLines = 0
@@ -56,7 +58,10 @@ class BaseMessageCell: BaseCollectionViewCell {
     self.appearance = appearance
     super.init(frame: frame)
 
-    self.bubbleView.backgroundColor = appearance.bubbleViewBackgroundColor
+    self.bubbleView.image = UIImage.resizable()
+      .corner(radius: 16)
+      .color(appearance.bubbleViewBackgroundColor)
+      .image
     self.messageLabel.textColor = appearance.messageLabelTextColor
 
     self.bubbleView.addSubview(self.messageLabel)
