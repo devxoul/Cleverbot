@@ -134,7 +134,7 @@ final class ChatViewController: BaseViewController {
       }
 
     viewModel.sections.asObservable()
-      .debounce(0, scheduler: MainScheduler.instance)
+      .debounce(0.1, scheduler: MainScheduler.instance)
       .withLatestFrom(wasReachedBottom) { ($0, $1) }
       .filter { _, wasReachedBottom in wasReachedBottom == true }
       .subscribe(onNext: { [weak self] _ in
