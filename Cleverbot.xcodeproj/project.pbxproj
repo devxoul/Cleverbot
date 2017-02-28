@@ -26,6 +26,8 @@
 		036666BA1E65EFBA00508EFD /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666B91E65EFBA00508EFD /* MessageCellModel.swift */; };
 		036666BC1E65EFDB00508EFD /* IncomingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BB1E65EFDB00508EFD /* IncomingMessageCell.swift */; };
 		036666BE1E65EFE200508EFD /* OutgoingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BD1E65EFE200508EFD /* OutgoingMessageCell.swift */; };
+		036666C01E65F07E00508EFD /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */; };
+		036666C31E65F0AD00508EFD /* ChatViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C21E65F0AD00508EFD /* ChatViewSection.swift */; };
 		F61ED895DAB83521475EF0E4 /* Pods_Cleverbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		036666B91E65EFBA00508EFD /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
 		036666BB1E65EFDB00508EFD /* IncomingMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageCell.swift; sourceTree = "<group>"; };
 		036666BD1E65EFE200508EFD /* OutgoingMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCell.swift; sourceTree = "<group>"; };
+		036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		036666C21E65F0AD00508EFD /* ChatViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewSection.swift; sourceTree = "<group>"; };
 		50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleverbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C539215C39E6C4FB41683F9 /* Pods-Cleverbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.release.xcconfig"; sourceTree = "<group>"; };
 		EBEADB1197DD1ACCE235178A /* Pods-Cleverbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				0365BF8C1E65E9440039F7CE /* AppDelegate.swift */,
 				036666971E65EB6800508EFD /* Services */,
 				036666951E65EB6800508EFD /* Models */,
+				036666C11E65F0A800508EFD /* Sections */,
 				036666981E65EB6800508EFD /* ViewControllers */,
 				0366669A1E65EB6800508EFD /* Views */,
 				036666961E65EB6800508EFD /* Rx */,
@@ -141,6 +146,7 @@
 		036666961E65EB6800508EFD /* Rx */ = {
 			isa = PBXGroup;
 			children = (
+				036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -183,6 +189,14 @@
 				036666B51E65EF9900508EFD /* UICollectionView+CellWidth.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		036666C11E65F0A800508EFD /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				036666C21E65F0AD00508EFD /* ChatViewSection.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		70C369DDA916705308645C3C /* Pods */ = {
@@ -328,6 +342,7 @@
 				036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */,
 				036666B81E65EF9900508EFD /* UICollectionView+CellWidth.swift in Sources */,
 				036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */,
+				036666C01E65F07E00508EFD /* UIViewController+Rx.swift in Sources */,
 				036666B71E65EF9900508EFD /* String+BoundingRect.swift in Sources */,
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
 				036666A41E65ECF600508EFD /* Message.swift in Sources */,
@@ -336,6 +351,7 @@
 				0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */,
 				036666AC1E65EEBB00508EFD /* ChatViewModel.swift in Sources */,
 				036666B21E65EF7B00508EFD /* BaseMessageCell.swift in Sources */,
+				036666C31E65F0AD00508EFD /* ChatViewSection.swift in Sources */,
 				036666BA1E65EFBA00508EFD /* MessageCellModel.swift in Sources */,
 				036666BC1E65EFDB00508EFD /* IncomingMessageCell.swift in Sources */,
 				036666BE1E65EFE200508EFD /* OutgoingMessageCell.swift in Sources */,
