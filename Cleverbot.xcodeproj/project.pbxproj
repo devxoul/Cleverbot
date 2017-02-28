@@ -16,6 +16,8 @@
 		036666A41E65ECF600508EFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A31E65ECF600508EFD /* Message.swift */; };
 		036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A51E65ED7800508EFD /* IncomingMessage.swift */; };
 		036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A71E65EDB200508EFD /* OutgoingMessage.swift */; };
+		036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A91E65EEA000508EFD /* ChatViewController.swift */; };
+		036666AC1E65EEBB00508EFD /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666AB1E65EEBB00508EFD /* ChatViewModel.swift */; };
 		F61ED895DAB83521475EF0E4 /* Pods_Cleverbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		036666A31E65ECF600508EFD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		036666A51E65ED7800508EFD /* IncomingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
 		036666A71E65EDB200508EFD /* OutgoingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
+		036666A91E65EEA000508EFD /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		036666AB1E65EEBB00508EFD /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleverbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C539215C39E6C4FB41683F9 /* Pods-Cleverbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.release.xcconfig"; sourceTree = "<group>"; };
 		EBEADB1197DD1ACCE235178A /* Pods-Cleverbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				036666991E65EB6800508EFD /* BaseViewController.swift */,
+				036666A91E65EEA000508EFD /* ChatViewController.swift */,
+				036666AB1E65EEBB00508EFD /* ChatViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -296,10 +302,12 @@
 			files = (
 				0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */,
 				036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */,
+				036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */,
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
 				036666A41E65ECF600508EFD /* Message.swift in Sources */,
 				036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */,
 				0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */,
+				036666AC1E65EEBB00508EFD /* ChatViewModel.swift in Sources */,
 				0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

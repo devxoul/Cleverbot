@@ -30,7 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window.backgroundColor = .white
     window.makeKeyAndVisible()
 
-    window.rootViewController = UIViewController()
+    let serviceProvider = ServiceProvider()
+    let chatViewModel = ChatViewModel(provider: serviceProvider)
+    let chatViewController = ChatViewController(viewModel: chatViewModel)
+    let navigationController = UINavigationController(rootViewController: chatViewController)
+    window.rootViewController = navigationController
 
     self.window = window
     return true
