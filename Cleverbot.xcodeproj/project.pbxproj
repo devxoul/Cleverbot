@@ -13,6 +13,9 @@
 		0366669B1E65EB6800508EFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666991E65EB6800508EFD /* ViewController.swift */; };
 		0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366669D1E65EC0300508EFD /* ServiceProvider.swift */; };
 		036666A21E65ECAC00508EFD /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A11E65ECAC00508EFD /* ModelType.swift */; };
+		036666A41E65ECF600508EFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A31E65ECF600508EFD /* Message.swift */; };
+		036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A51E65ED7800508EFD /* IncomingMessage.swift */; };
+		036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A71E65EDB200508EFD /* OutgoingMessage.swift */; };
 		F61ED895DAB83521475EF0E4 /* Pods_Cleverbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		036666991E65EB6800508EFD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0366669D1E65EC0300508EFD /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		036666A11E65ECAC00508EFD /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		036666A31E65ECF600508EFD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		036666A51E65ED7800508EFD /* IncomingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
+		036666A71E65EDB200508EFD /* OutgoingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
 		50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleverbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C539215C39E6C4FB41683F9 /* Pods-Cleverbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.release.xcconfig"; sourceTree = "<group>"; };
 		EBEADB1197DD1ACCE235178A /* Pods-Cleverbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				036666A11E65ECAC00508EFD /* ModelType.swift */,
+				036666A31E65ECF600508EFD /* Message.swift */,
+				036666A51E65ED7800508EFD /* IncomingMessage.swift */,
+				036666A71E65EDB200508EFD /* OutgoingMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,7 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */,
+				036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */,
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
+				036666A41E65ECF600508EFD /* Message.swift in Sources */,
+				036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */,
 				0366669B1E65EB6800508EFD /* ViewController.swift in Sources */,
 				0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */,
 			);
