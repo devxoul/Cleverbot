@@ -6,7 +6,7 @@
 //  Copyright © 2017 Suyeol Jeon. All rights reserved.
 //
 
-protocol ServiceProviderType {
+protocol ServiceProviderType: class {
 }
 
 final class ServiceProvider: ServiceProviderType {

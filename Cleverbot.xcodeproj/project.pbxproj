@@ -31,6 +31,7 @@
 		036666C51E65F31A00508EFD /* MessageInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C41E65F31A00508EFD /* MessageInputBar.swift */; };
 		036666C71E65F32F00508EFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C61E65F32F00508EFD /* String+Localized.swift */; };
 		036666C91E65F37800508EFD /* UICollectionView+ScrollToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */; };
+		036666CB1E65F41400508EFD /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CA1E65F41400508EFD /* BaseService.swift */; };
 		F61ED895DAB83521475EF0E4 /* Pods_Cleverbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		036666C41E65F31A00508EFD /* MessageInputBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputBar.swift; sourceTree = "<group>"; };
 		036666C61E65F32F00508EFD /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToBottom.swift"; sourceTree = "<group>"; };
+		036666CA1E65F41400508EFD /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleverbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C539215C39E6C4FB41683F9 /* Pods-Cleverbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.release.xcconfig"; sourceTree = "<group>"; };
 		EBEADB1197DD1ACCE235178A /* Pods-Cleverbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0366669D1E65EC0300508EFD /* ServiceProvider.swift */,
+				036666CA1E65F41400508EFD /* BaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */,
 				036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */,
 				036666C51E65F31A00508EFD /* MessageInputBar.swift in Sources */,
+				036666CB1E65F41400508EFD /* BaseService.swift in Sources */,
 				036666C91E65F37800508EFD /* UICollectionView+ScrollToBottom.swift in Sources */,
 				036666B81E65EF9900508EFD /* UICollectionView+CellWidth.swift in Sources */,
 				036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */,
