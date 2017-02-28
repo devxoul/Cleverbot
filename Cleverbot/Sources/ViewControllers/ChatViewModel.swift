@@ -12,6 +12,7 @@ import RxSwift
 protocol ChatViewModelType {
   // Input
   var viewDidLoad: PublishSubject<Void> { get }
+  var messageInputDidTapSendButton: PublishSubject<String> { get }
 
   // Output
   var sections: Driver<[ChatViewSection]> { get }
@@ -20,9 +21,18 @@ protocol ChatViewModelType {
 
 final class ChatViewModel: ChatViewModelType {
 
+  // MARK: Types
+
+  enum MessageOperation {
+    case receive(Message)
+    case send(Message)
+  }
+
+
   // MARK: Input
 
   let viewDidLoad: PublishSubject<Void> = .init()
+  let messageInputDidTapSendButton: PublishSubject<String> = .init()
 
 
   // MARK: Ouptut

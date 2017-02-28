@@ -10,6 +10,8 @@ import UIKit
 
 import ReusableKit
 import RxDataSources
+import RxKeyboard
+import RxSwift
 
 final class ChatViewController: BaseViewController {
 
@@ -44,6 +46,7 @@ final class ChatViewController: BaseViewController {
     $0.register(Reusable.incomingMessageCell)
     $0.register(Reusable.outgoingMessageCell)
   }
+  fileprivate let messageInputBar = MessageInputBar()
 
 
   // MARK: Initializing
@@ -64,12 +67,20 @@ final class ChatViewController: BaseViewController {
     super.viewDidLoad()
     self.view.backgroundColor = .white
 
+    self.collectionView.contentInset.bottom = self.messageInputBar.intrinsicContentSize.height
+    self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset
+
     self.view.addSubview(self.collectionView)
+    self.view.addSubview(self.messageInputBar)
   }
 
   override func setupConstraints() {
     self.collectionView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
+    }
+    self.messageInputBar.snp.makeConstraints { make in
+      make.left.right.equalTo(0)
+      make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
     }
   }
 
@@ -102,9 +113,51 @@ final class ChatViewController: BaseViewController {
       .bindTo(viewModel.viewDidLoad)
       .addDisposableTo(self.disposeBag)
 
+    self.messageInputBar.rx.sendButtonTap
+      .bindTo(viewModel.messageInputDidTapSendButton)
+      .addDisposableTo(self.disposeBag)
+
     // Output
     viewModel.sections
       .drive(self.collectionView.rx.items(dataSource: self.dataSource))
+      .addDisposableTo(self.disposeBag)
+
+    // UI
+    let wasReachedBottom: Observable<Bool> = self.collectionView.rx.contentOffset
+      .map { [weak self] _ in
+        self?.collectionView.isReachedBottom() ?? false
+      }
+
+    viewModel.sections.asObservable()
+      .debounce(0, scheduler: MainScheduler.instance)
+      .withLatestFrom(wasReachedBottom) { ($0, $1) }
+      .filter { _, wasReachedBottom in wasReachedBottom == true }
+      .subscribe(onNext: { [weak self] _ in
+        // scroll to bottom when receive message only if last content offset was at the bottom
+        self?.collectionView.scrollToBottom(animated: true)
+      })
+      .addDisposableTo(self.disposeBag)
+
+    // Keyboard
+    RxKeyboard.instance.visibleHeight
+      .drive(onNext: { [weak self] keyboardVisibleHeight in
+        guard let `self` = self, self.didSetupConstraints else { return }
+        self.messageInputBar.snp.updateConstraints { make in
+          make.bottom.equalTo(self.bottomLayoutGuide.snp.top).offset(-keyboardVisibleHeight)
+        }
+        self.view.setNeedsLayout()
+        UIView.animate(withDuration: 0) {
+          self.collectionView.contentInset.bottom = keyboardVisibleHeight + self.messageInputBar.height
+          self.collectionView.scrollIndicatorInsets.bottom = self.collectionView.contentInset.bottom
+          self.view.layoutIfNeeded()
+        }
+      })
+      .addDisposableTo(self.disposeBag)
+
+    RxKeyboard.instance.willShowVisibleHeight
+      .drive(onNext: { [weak self] keyboardVisibleHeight in
+        self?.collectionView.contentOffset.y += keyboardVisibleHeight
+      })
       .addDisposableTo(self.disposeBag)
   }
 
