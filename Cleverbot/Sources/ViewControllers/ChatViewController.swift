@@ -113,6 +113,10 @@ final class ChatViewController: BaseViewController {
       .bindTo(viewModel.viewDidLoad)
       .addDisposableTo(self.disposeBag)
 
+    self.rx.deallocated
+      .bindTo(viewModel.viewDidDeallocate)
+      .addDisposableTo(self.disposeBag)
+
     self.messageInputBar.rx.sendButtonTap
       .bindTo(viewModel.messageInputDidTapSendButton)
       .addDisposableTo(self.disposeBag)
