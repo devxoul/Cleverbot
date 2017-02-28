@@ -1,0 +1,6 @@
+api_key: ce16047a0f66aebf6d62cf821b5b031e
+project_id: 98681
+type: apple_strings
+
+languages: [en, ko]
+path: Cleverbot/Resources/{LANGUAGE}.lproj/Localizable.strings
