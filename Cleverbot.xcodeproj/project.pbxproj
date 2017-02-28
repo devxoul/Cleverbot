@@ -32,6 +32,8 @@
 		036666C71E65F32F00508EFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C61E65F32F00508EFD /* String+Localized.swift */; };
 		036666C91E65F37800508EFD /* UICollectionView+ScrollToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */; };
 		036666CB1E65F41400508EFD /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CA1E65F41400508EFD /* BaseService.swift */; };
+		036666CD1E65F43800508EFD /* CleverbotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CC1E65F43800508EFD /* CleverbotService.swift */; };
+		036666CF1E65F8DB00508EFD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CE1E65F8DB00508EFD /* Configuration.swift */; };
 		F61ED895DAB83521475EF0E4 /* Pods_Cleverbot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		036666C61E65F32F00508EFD /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToBottom.swift"; sourceTree = "<group>"; };
 		036666CA1E65F41400508EFD /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		036666CC1E65F43800508EFD /* CleverbotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleverbotService.swift; sourceTree = "<group>"; };
+		036666CE1E65F8DB00508EFD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		50860FFD13D0A9F789E359A0 /* Pods_Cleverbot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleverbot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C539215C39E6C4FB41683F9 /* Pods-Cleverbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.release.xcconfig"; sourceTree = "<group>"; };
 		EBEADB1197DD1ACCE235178A /* Pods-Cleverbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleverbot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0365BF8C1E65E9440039F7CE /* AppDelegate.swift */,
+				036666CE1E65F8DB00508EFD /* Configuration.swift */,
 				036666971E65EB6800508EFD /* Services */,
 				036666951E65EB6800508EFD /* Models */,
 				036666C11E65F0A800508EFD /* Sections */,
@@ -164,6 +169,7 @@
 			children = (
 				0366669D1E65EC0300508EFD /* ServiceProvider.swift */,
 				036666CA1E65F41400508EFD /* BaseService.swift */,
+				036666CC1E65F43800508EFD /* CleverbotService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -358,8 +364,10 @@
 				036666B81E65EF9900508EFD /* UICollectionView+CellWidth.swift in Sources */,
 				036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */,
 				036666C01E65F07E00508EFD /* UIViewController+Rx.swift in Sources */,
+				036666CD1E65F43800508EFD /* CleverbotService.swift in Sources */,
 				036666B71E65EF9900508EFD /* String+BoundingRect.swift in Sources */,
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
+				036666CF1E65F8DB00508EFD /* Configuration.swift in Sources */,
 				036666A41E65ECF600508EFD /* Message.swift in Sources */,
 				036666B01E65EF6600508EFD /* BaseCollectionViewCell.swift in Sources */,
 				036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */,

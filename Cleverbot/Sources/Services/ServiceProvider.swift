@@ -7,7 +7,9 @@
 //
 
 protocol ServiceProviderType: class {
+  var cleverbotService: CleverbotServiceType { get }
 }
 
 final class ServiceProvider: ServiceProviderType {
+  lazy var cleverbotService: CleverbotServiceType = CleverbotService(provider: self)
 }
