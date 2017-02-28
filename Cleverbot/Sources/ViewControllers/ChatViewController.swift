@@ -53,6 +53,7 @@ final class ChatViewController: BaseViewController {
 
   init(viewModel: ChatViewModelType) {
     super.init()
+    self.title = "Cleverbot"
     self.configure(viewModel: viewModel)
   }
   
