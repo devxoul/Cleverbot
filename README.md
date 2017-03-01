@@ -4,7 +4,7 @@
 
 [Cleverbot](https://www.cleverbot.com/) for iOS using [RxMVVM architecture](https://github.com/devxoul/RxMVVM).
 
-![](https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/17038534_1375091549197104_7475209245399370701_o.jpg?oh=244afa354107526cadf984d312c4a9c8&oe=594470C3)
+![cleverbot](https://cloud.githubusercontent.com/assets/931655/23445337/14bc4afc-fe7e-11e6-81ca-7ceb49c16ebe.png)
 
 ## Features
 
