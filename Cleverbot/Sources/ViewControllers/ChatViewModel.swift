@@ -1,5 +1,5 @@
 //
-//  ChatViewModel.swift
+//  ChatViewReactor.swift
 //  Cleverbot
 //
 //  Created by Suyeol Jeon on 01/03/2017.
@@ -9,7 +9,7 @@
 import RxCocoa
 import RxSwift
 
-protocol ChatViewModelType {
+protocol ChatViewReactorType {
   // Input
   var viewDidLoad: PublishSubject<Void> { get }
   var viewDidDeallocate: PublishSubject<Void> { get }
@@ -20,7 +20,7 @@ protocol ChatViewModelType {
 }
 
 
-final class ChatViewModel: ChatViewModelType {
+final class ChatViewReactor: ChatViewReactorType {
 
   // MARK: Types
 

@@ -75,18 +75,18 @@ class BaseMessageCell: BaseCollectionViewCell {
 
   // MARK: Configuring
 
-  func configure(viewModel: MessageCellModelType) {
-    self.messageLabel.text = viewModel.messageLabelText
+  func configure(reactor: MessageCellModelType) {
+    self.messageLabel.text = reactor.messageLabelText
     self.setNeedsLayout()
   }
 
 
   // MARK: Size
 
-  class func size(thatFitsWidth width: CGFloat, viewModel: MessageCellModelType) -> CGSize {
+  class func size(thatFitsWidth width: CGFloat, reactor: MessageCellModelType) -> CGSize {
     var height: CGFloat = 0
     let bubbleWidth = min(width, Metric.bubbleViewMaximumWidth)
-    if let message = viewModel.messageLabelText {
+    if let message = reactor.messageLabelText {
       let messageLabelWidth = bubbleWidth - Metric.messageLabelLeftRight * 2
       height += Metric.messageLabelTopBottom
       height += message.height(thatFitsWidth: messageLabelWidth, font: Font.messageLabel)

@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window.makeKeyAndVisible()
 
     let serviceProvider = ServiceProvider()
-    let chatViewModel = ChatViewModel(provider: serviceProvider)
-    let chatViewController = ChatViewController(viewModel: chatViewModel)
+    let chatViewReactor = ChatViewReactor(provider: serviceProvider)
+    let chatViewController = ChatViewController(reactor: chatViewReactor)
     let navigationController = UINavigationController(rootViewController: chatViewController)
     window.rootViewController = navigationController
 

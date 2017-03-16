@@ -51,10 +51,10 @@ final class ChatViewController: BaseViewController {
 
   // MARK: Initializing
 
-  init(viewModel: ChatViewModelType) {
+  init(reactor: ChatViewReactorType) {
     super.init()
     self.title = "Cleverbot"
-    self.configure(viewModel: viewModel)
+    self.configure(reactor: reactor)
   }
   
   required convenience init?(coder aDecoder: NSCoder) {
@@ -88,7 +88,7 @@ final class ChatViewController: BaseViewController {
 
   // MARK: Configuring
 
-  private func configure(viewModel: ChatViewModelType) {
+  private func configure(reactor: ChatViewReactorType) {
     // Delegate
     self.collectionView.rx
       .setDelegate(self)
@@ -99,31 +99,31 @@ final class ChatViewController: BaseViewController {
       switch sectionItem {
       case let .incomingMessage(cellModel):
         let cell = collectionView.dequeue(Reusable.incomingMessageCell, for: indexPath)
-        cell.configure(viewModel: cellModel)
+        cell.configure(reactor: cellModel)
         return cell
 
       case let .outgoingMessage(cellModel):
         let cell = collectionView.dequeue(Reusable.outgoingMessageCell, for: indexPath)
-        cell.configure(viewModel: cellModel)
+        cell.configure(reactor: cellModel)
         return cell
       }
     }
 
     // Input
     self.rx.viewDidLoad
-      .bindTo(viewModel.viewDidLoad)
+      .bindTo(reactor.viewDidLoad)
       .addDisposableTo(self.disposeBag)
 
     self.rx.deallocated
-      .bindTo(viewModel.viewDidDeallocate)
+      .bindTo(reactor.viewDidDeallocate)
       .addDisposableTo(self.disposeBag)
 
     self.messageInputBar.rx.sendButtonTap
-      .bindTo(viewModel.messageInputDidTapSendButton)
+      .bindTo(reactor.messageInputDidTapSendButton)
       .addDisposableTo(self.disposeBag)
 
     // Output
-    viewModel.sections
+    reactor.sections
       .drive(self.collectionView.rx.items(dataSource: self.dataSource))
       .addDisposableTo(self.disposeBag)
 
@@ -133,7 +133,7 @@ final class ChatViewController: BaseViewController {
         self?.collectionView.isReachedBottom() ?? false
       }
 
-    viewModel.sections.asObservable()
+    reactor.sections.asObservable()
       .debounce(0.1, scheduler: MainScheduler.instance)
       .withLatestFrom(wasReachedBottom) { ($0, $1) }
       .filter { _, wasReachedBottom in wasReachedBottom == true }
@@ -182,10 +182,10 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
     let cellModel = self.dataSource[indexPath]
     switch cellModel {
     case let .incomingMessage(cellModel):
-      return IncomingMessageCell.size(thatFitsWidth: cellWidth, viewModel: cellModel)
+      return IncomingMessageCell.size(thatFitsWidth: cellWidth, reactor: cellModel)
 
     case let .outgoingMessage(cellModel):
-      return OutgoingMessageCell.size(thatFitsWidth: cellWidth, viewModel: cellModel)
+      return OutgoingMessageCell.size(thatFitsWidth: cellWidth, reactor: cellModel)
     }
   }
 
