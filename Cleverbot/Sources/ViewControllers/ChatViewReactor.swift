@@ -87,12 +87,12 @@ final class ChatViewReactor: ChatViewReactorType {
     let messageSection: Observable<[ChatViewSection]> = messages
       .map { messages in
         let sectionItems = messages.map { message -> ChatViewSectionItem in
-          let cellModel = MessageCellModel(provider: provider, message: message)
+          let reactor = MessageCellReactor(provider: provider, message: message)
           switch message {
           case .incoming:
-            return ChatViewSectionItem.incomingMessage(cellModel)
+            return ChatViewSectionItem.incomingMessage(reactor)
           case .outgoing:
-            return ChatViewSectionItem.outgoingMessage(cellModel)
+            return ChatViewSectionItem.outgoingMessage(reactor)
           }
         }
         return [ChatViewSection(items: sectionItems)]

@@ -97,14 +97,14 @@ final class ChatViewController: BaseViewController {
     // DataSource
     self.dataSource.configureCell = { dataSource, collectionView, indexPath, sectionItem in
       switch sectionItem {
-      case let .incomingMessage(cellModel):
+      case let .incomingMessage(reactor):
         let cell = collectionView.dequeue(Reusable.incomingMessageCell, for: indexPath)
-        cell.configure(reactor: cellModel)
+        cell.configure(reactor: reactor)
         return cell
 
-      case let .outgoingMessage(cellModel):
+      case let .outgoingMessage(reactor):
         let cell = collectionView.dequeue(Reusable.outgoingMessageCell, for: indexPath)
-        cell.configure(reactor: cellModel)
+        cell.configure(reactor: reactor)
         return cell
       }
     }
@@ -179,13 +179,13 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
     sizeForItemAt indexPath: IndexPath
   ) -> CGSize {
     let cellWidth = collectionView.cellWidth(forSectionAt: indexPath.section)
-    let cellModel = self.dataSource[indexPath]
-    switch cellModel {
-    case let .incomingMessage(cellModel):
-      return IncomingMessageCell.size(thatFitsWidth: cellWidth, reactor: cellModel)
+    let reactor = self.dataSource[indexPath]
+    switch reactor {
+    case let .incomingMessage(reactor):
+      return IncomingMessageCell.size(thatFitsWidth: cellWidth, reactor: reactor)
 
-    case let .outgoingMessage(cellModel):
-      return OutgoingMessageCell.size(thatFitsWidth: cellWidth, reactor: cellModel)
+    case let .outgoingMessage(reactor):
+      return OutgoingMessageCell.size(thatFitsWidth: cellWidth, reactor: reactor)
     }
   }
 

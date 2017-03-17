@@ -1,5 +1,5 @@
 //
-//  MessageCellModel.swift
+//  MessageCellReactor.swift
 //  Cleverbot
 //
 //  Created by Suyeol Jeon on 01/03/2017.
@@ -9,11 +9,11 @@
 import RxCocoa
 import RxSwift
 
-protocol MessageCellModelType {
+protocol MessageCellReactorType {
   var messageLabelText: String? { get }
 }
 
-final class MessageCellModel: MessageCellModelType {
+final class MessageCellReactor: MessageCellReactorType {
 
   // MARK: Output
 

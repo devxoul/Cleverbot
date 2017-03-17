@@ -24,6 +24,6 @@ extension ChatViewSection: SectionModelType {
 }
 
 enum ChatViewSectionItem {
-  case incomingMessage(MessageCellModelType)
-  case outgoingMessage(MessageCellModelType)
+  case incomingMessage(MessageCellReactorType)
+  case outgoingMessage(MessageCellReactorType)
 }
