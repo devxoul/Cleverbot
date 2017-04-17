@@ -12,6 +12,6 @@ struct Configuration {
   /// Cleverbot API key. You may issue the free API key on the cleverbot website.
   ///
   /// - seealso: https://www.cleverbot.com/api/
-  static let apiKey = "YOUR_CLEVERBOT_API_KEY"
+  static let apiKey = "3bd32ce29dee047caae09ad3198c35d1"
 
 }

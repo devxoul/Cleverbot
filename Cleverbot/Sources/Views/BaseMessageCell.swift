@@ -8,9 +8,10 @@
 
 import UIKit
 
+import ReactorKit
 import SwiftyImage
 
-class BaseMessageCell: BaseCollectionViewCell {
+class BaseMessageCell: BaseCollectionViewCell, View {
 
   // MARK: Types
 
@@ -75,18 +76,20 @@ class BaseMessageCell: BaseCollectionViewCell {
 
   // MARK: Configuring
 
-  func configure(reactor: MessageCellReactorType) {
-    self.messageLabel.text = reactor.messageLabelText
+  func bind(reactor: MessageCellReactor) {
+    reactor.state.map { $0.message }
+      .bindTo(self.messageLabel.rx.text)
+      .addDisposableTo(self.disposeBag)
     self.setNeedsLayout()
   }
 
 
   // MARK: Size
 
-  class func size(thatFitsWidth width: CGFloat, reactor: MessageCellReactorType) -> CGSize {
+  class func size(thatFitsWidth width: CGFloat, reactor: MessageCellReactor) -> CGSize {
     var height: CGFloat = 0
     let bubbleWidth = min(width, Metric.bubbleViewMaximumWidth)
-    if let message = reactor.messageLabelText {
+    if let message = reactor.currentState.message {
       let messageLabelWidth = bubbleWidth - Metric.messageLabelLeftRight * 2
       height += Metric.messageLabelTopBottom
       height += message.height(thatFitsWidth: messageLabelWidth, font: Font.messageLabel)
