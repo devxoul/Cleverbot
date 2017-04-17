@@ -3,6 +3,9 @@ platform :ios, '9.0'
 target 'Cleverbot' do
   use_frameworks!
 
+  # Architecture
+  pod 'ReactorKit'
+
   # Networking
   pod 'Alamofire'
 
