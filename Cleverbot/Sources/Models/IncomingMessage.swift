@@ -6,15 +6,15 @@
 //  Copyright © 2017 Suyeol Jeon. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
 /// The message from cleverbot
 struct IncomingMessage: ModelType {
   var cs: String
   var text: String
 
-  init(map: Map) throws {
-    self.cs = try map.value("cs")
-    self.text = try map.value("output")
+  enum CodingKeys: String, CodingKey {
+    case cs
+    case text = "output"
   }
 }

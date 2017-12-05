@@ -1,41 +1,57 @@
 PODS:
-  - Alamofire (4.3.0)
-  - CGFloatLiteral (0.3.0)
+  - Alamofire (4.6.0)
+  - CGFloatLiteral (0.4.0)
+  - Differentiator (3.0.2)
   - ManualLayout (1.3.0)
-  - ObjectMapper (2.2.3)
-  - ReactorKit (0.1.0):
-    - RxSwift (>= 3.0.0)
-  - ReusableKit (1.1.0)
-  - RxCocoa (3.2.0):
-    - RxSwift (~> 3.1)
-  - RxDataSources (1.0.3):
-    - RxCocoa (~> 3.0)
-    - RxSwift (~> 3.0)
-  - RxKeyboard (0.4.1):
-    - RxCocoa (>= 3.0)
-    - RxSwift (>= 3.0)
-  - RxOptional (3.1.3):
-    - RxCocoa
-    - RxSwift
-  - RxSwift (3.2.0)
-  - SnapKit (3.2.0)
+  - ReactorKit (1.1.0):
+    - RxSwift (>= 4.0.0)
+  - ReusableKit (2.0.0):
+    - ReusableKit/Core (= 2.0.0)
+    - ReusableKit/RxSwift (= 2.0.0)
+  - ReusableKit/Core (2.0.0)
+  - ReusableKit/RxSwift (2.0.0):
+    - ReusableKit/Core
+    - RxCocoa (>= 4.0.0-beta.0)
+    - RxSwift (>= 4.0.0-beta.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxCodable (0.3.0):
+    - RxCodable/Core (= 0.3.0)
+  - RxCodable/Core (0.3.0):
+    - RxSwift (>= 4.0.0-beta.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxKeyboard (0.7.1):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - RxOptional (3.3.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - RxViewController (0.3.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (4.0.0)
   - SwiftyColor (1.0.0)
-  - SwiftyImage (1.0.0)
-  - Then (2.1.0)
+  - SwiftyImage (1.2.0)
+  - Then (2.3.0)
   - UITextView+Placeholder (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - CGFloatLiteral
   - ManualLayout
-  - ObjectMapper
   - ReactorKit
   - ReusableKit
   - RxCocoa
+  - RxCodable
   - RxDataSources
   - RxKeyboard
   - RxOptional
   - RxSwift
+  - RxViewController
   - SnapKit
   - SwiftyColor
   - SwiftyImage
@@ -43,23 +59,25 @@ DEPENDENCIES:
   - UITextView+Placeholder
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  CGFloatLiteral: faba125ab2bb8fa90142c414f876b83099c26f25
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  CGFloatLiteral: 2ab558b74124b584dd023a35b7e41795a61d8140
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   ManualLayout: 68ac8cfa6b5f656f7a9fadec3730208b95986880
-  ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
-  ReactorKit: b461941775ff25f28b6326b786445b68f9e48dfd
-  ReusableKit: 89e743a120bab0d95848bff27e481833c2768905
-  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
-  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
-  RxKeyboard: 4046ecd1884a3bf0dacb823bd2ac8b00482d29ff
-  RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
-  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
+  ReusableKit: 668daa3e98e614ec2e135db2028a958baa2abd6f
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxCodable: 12d41ab0ba58f455cfc83965fcc927ac4bad3e7f
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxKeyboard: eae01da0d1750e1c4852d20798279cf7b318c304
+  RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyColor: 7fa09db14051bc5d7f539e1c4576665975225992
-  SwiftyImage: 79090f8b96057b3e91064de172936b97855086e6
-  Then: 8496793c8fcac95482b943909b440724c7d8d82c
+  SwiftyImage: ebaa7c7b6163cd4ad102f3bb05a8fb276d35b4f3
+  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 0020fa9e4617704c222c805129c3b85afea1b438
+PODFILE CHECKSUM: 1e5a0a1b5b8704537b89dc08cee20174fae7bc51
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1

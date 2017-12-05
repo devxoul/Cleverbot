@@ -18,8 +18,7 @@ final class MessageCellReactor: Reactor {
 
   let initialState: State
 
-  init(provider: ServiceProviderType, message: Message) {
+  init(message: Message) {
     self.initialState = State(message: message.text)
   }
-
 }

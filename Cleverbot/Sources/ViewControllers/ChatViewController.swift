@@ -34,7 +34,7 @@ final class ChatViewController: BaseViewController, View {
 
   // MARK: Properties
 
-  fileprivate let dataSource = RxCollectionViewSectionedReloadDataSource<ChatViewSection>()
+  private lazy var dataSource = self.createDataSource()
 
 
   // MARK: UI
@@ -63,6 +63,24 @@ final class ChatViewController: BaseViewController, View {
     fatalError("init(coder:) has not been implemented")
   }
 
+  private func createDataSource() -> RxCollectionViewSectionedReloadDataSource<ChatViewSection> {
+    return .init(
+      configureCell: { dataSource, collectionView, indexPath, sectionItem in
+        switch sectionItem {
+        case let .incomingMessage(reactor):
+          let cell = collectionView.dequeue(Reusable.incomingMessageCell, for: indexPath)
+          cell.reactor = reactor
+          return cell
+
+        case let .outgoingMessage(reactor):
+          let cell = collectionView.dequeue(Reusable.outgoingMessageCell, for: indexPath)
+          cell.reactor = reactor
+          return cell
+        }
+      }
+    )
+  }
+
 
   // MARK: View Life Cycle
 
@@ -83,7 +101,7 @@ final class ChatViewController: BaseViewController, View {
     }
     self.messageInputBar.snp.makeConstraints { make in
       make.left.right.equalTo(0)
-      make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
+      make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
     }
   }
 
@@ -94,31 +112,17 @@ final class ChatViewController: BaseViewController, View {
     // Delegate
     self.collectionView.rx
       .setDelegate(self)
-      .addDisposableTo(self.disposeBag)
-
-    self.dataSource.configureCell = { dataSource, collectionView, indexPath, sectionItem in
-      switch sectionItem {
-      case let .incomingMessage(reactor):
-        let cell = collectionView.dequeue(Reusable.incomingMessageCell, for: indexPath)
-        cell.reactor = reactor
-        return cell
-
-      case let .outgoingMessage(reactor):
-        let cell = collectionView.dequeue(Reusable.outgoingMessageCell, for: indexPath)
-        cell.reactor = reactor
-        return cell
-      }
-    }
+      .disposed(by: self.disposeBag)
 
     // Action
     self.messageInputBar.rx.sendButtonTap.map(Reactor.Action.send)
-      .bindTo(reactor.action)
-      .addDisposableTo(self.disposeBag)
+      .bind(to: reactor.action)
+      .disposed(by: self.disposeBag)
 
     // State
     reactor.state.map { $0.sections }
-      .bindTo(self.collectionView.rx.items(dataSource: self.dataSource))
-      .addDisposableTo(self.disposeBag)
+      .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
+      .disposed(by: self.disposeBag)
 
     // UI
     let wasReachedBottom: Observable<Bool> = self.collectionView.rx.contentOffset
@@ -134,14 +138,14 @@ final class ChatViewController: BaseViewController, View {
         // scroll to bottom when receive message only if last content offset was at the bottom
         self?.collectionView.scrollToBottom(animated: true)
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
 
     // Keyboard
     RxKeyboard.instance.visibleHeight
       .drive(onNext: { [weak self] keyboardVisibleHeight in
         guard let `self` = self, self.didSetupConstraints else { return }
         self.messageInputBar.snp.updateConstraints { make in
-          make.bottom.equalTo(self.bottomLayoutGuide.snp.top).offset(-keyboardVisibleHeight)
+          make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-keyboardVisibleHeight)
         }
         self.view.setNeedsLayout()
         UIView.animate(withDuration: 0) {
@@ -150,13 +154,13 @@ final class ChatViewController: BaseViewController, View {
           self.view.layoutIfNeeded()
         }
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
 
     RxKeyboard.instance.willShowVisibleHeight
       .drive(onNext: { [weak self] keyboardVisibleHeight in
-        self?.collectionView.contentOffset.y += keyboardVisibleHeight
+        self?.collectionView.scrollToBottom(animated: true)
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
   }
 
 }

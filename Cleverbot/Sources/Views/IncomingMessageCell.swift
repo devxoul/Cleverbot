@@ -20,7 +20,7 @@ final class IncomingMessageCell: BaseMessageCell {
 
   // MARK: Initializing
 
-  init(frame: CGRect) {
+  @objc init(frame: CGRect) {
     let appearance = Appearance(
       bubbleViewBackgroundColor: Color.bubbleViewBackground,
       bubbleViewAlignment: .left,

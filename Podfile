@@ -9,15 +9,14 @@ target 'Cleverbot' do
   # Networking
   pod 'Alamofire'
 
-  # Model
-  pod 'ObjectMapper'
-
   # Rx
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'RxOptional'
   pod 'RxKeyboard'
+  pod 'RxViewController'
+  pod 'RxCodable'
 
   # UI
   pod 'SnapKit'
@@ -30,5 +29,4 @@ target 'Cleverbot' do
   pod 'UITextView+Placeholder'
   pod 'SwiftyColor'
   pod 'SwiftyImage'
-
 end

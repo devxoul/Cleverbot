@@ -19,24 +19,15 @@ import UITextView_Placeholder
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  var dependency: AppDependency!
   var window: UIWindow?
 
   func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
   ) -> Bool {
-    let window = UIWindow(frame: UIScreen.main.bounds)
-    window.backgroundColor = .white
-    window.makeKeyAndVisible()
-
-    let serviceProvider = ServiceProvider()
-    let chatViewReactor = ChatViewReactor(provider: serviceProvider)
-    let chatViewController = ChatViewController(reactor: chatViewReactor)
-    let navigationController = UINavigationController(rootViewController: chatViewController)
-    window.rootViewController = navigationController
-
-    self.window = window
+    self.dependency = self.dependency ?? CompositionRoot.resolve()
+    self.window = self.dependency.window
     return true
   }
 }

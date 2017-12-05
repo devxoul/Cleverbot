@@ -6,7 +6,7 @@
 //  Copyright © 2017 Suyeol Jeon. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
 enum Message {
   case incoming(IncomingMessage)
@@ -14,9 +14,9 @@ enum Message {
 
   var text: String {
     switch self {
-    case .incoming(let message):
+    case let .incoming(message):
       return message.text
-    case .outgoing(let message):
+    case let .outgoing(message):
       return message.text
     }
   }

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0310C2741FD67A1500C0BDCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310C2731FD67A1500C0BDCD /* AppDelegate.swift */; };
+		0310C2761FD67A2500C0BDCD /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310C2751FD67A2500C0BDCD /* CompositionRoot.swift */; };
 		0365BF901E65E9440039F7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0365BF881E65E9440039F7CE /* Assets.xcassets */; };
 		0365BF911E65E9440039F7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0365BF891E65E9440039F7CE /* LaunchScreen.storyboard */; };
-		0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365BF8C1E65E9440039F7CE /* AppDelegate.swift */; };
 		0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666991E65EB6800508EFD /* BaseViewController.swift */; };
-		0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366669D1E65EC0300508EFD /* ServiceProvider.swift */; };
 		036666A21E65ECAC00508EFD /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A11E65ECAC00508EFD /* ModelType.swift */; };
 		036666A41E65ECF600508EFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A31E65ECF600508EFD /* Message.swift */; };
 		036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666A51E65ED7800508EFD /* IncomingMessage.swift */; };
@@ -26,12 +26,10 @@
 		036666BA1E65EFBA00508EFD /* MessageCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666B91E65EFBA00508EFD /* MessageCellReactor.swift */; };
 		036666BC1E65EFDB00508EFD /* IncomingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BB1E65EFDB00508EFD /* IncomingMessageCell.swift */; };
 		036666BE1E65EFE200508EFD /* OutgoingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BD1E65EFE200508EFD /* OutgoingMessageCell.swift */; };
-		036666C01E65F07E00508EFD /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */; };
 		036666C31E65F0AD00508EFD /* ChatViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C21E65F0AD00508EFD /* ChatViewSection.swift */; };
 		036666C51E65F31A00508EFD /* MessageInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C41E65F31A00508EFD /* MessageInputBar.swift */; };
 		036666C71E65F32F00508EFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C61E65F32F00508EFD /* String+Localized.swift */; };
 		036666C91E65F37800508EFD /* UICollectionView+ScrollToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */; };
-		036666CB1E65F41400508EFD /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CA1E65F41400508EFD /* BaseService.swift */; };
 		036666CD1E65F43800508EFD /* CleverbotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CC1E65F43800508EFD /* CleverbotService.swift */; };
 		036666CF1E65F8DB00508EFD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036666CE1E65F8DB00508EFD /* Configuration.swift */; };
 		036666D21E660C6900508EFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 036666D41E660C6900508EFD /* Localizable.strings */; };
@@ -40,13 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0310C2731FD67A1500C0BDCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0310C2751FD67A2500C0BDCD /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		0365BF721E65E90A0039F7CE /* Cleverbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleverbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0365BF881E65E9440039F7CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0365BF8A1E65E9440039F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0365BF8C1E65E9440039F7CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0365BF8F1E65E9440039F7CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036666991E65EB6800508EFD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		0366669D1E65EC0300508EFD /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		036666A11E65ECAC00508EFD /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		036666A31E65ECF600508EFD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		036666A51E65ED7800508EFD /* IncomingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
@@ -61,12 +59,10 @@
 		036666B91E65EFBA00508EFD /* MessageCellReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellReactor.swift; sourceTree = "<group>"; };
 		036666BB1E65EFDB00508EFD /* IncomingMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageCell.swift; sourceTree = "<group>"; };
 		036666BD1E65EFE200508EFD /* OutgoingMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCell.swift; sourceTree = "<group>"; };
-		036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		036666C21E65F0AD00508EFD /* ChatViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewSection.swift; sourceTree = "<group>"; };
 		036666C41E65F31A00508EFD /* MessageInputBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputBar.swift; sourceTree = "<group>"; };
 		036666C61E65F32F00508EFD /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		036666C81E65F37800508EFD /* UICollectionView+ScrollToBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollToBottom.swift"; sourceTree = "<group>"; };
-		036666CA1E65F41400508EFD /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		036666CC1E65F43800508EFD /* CleverbotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleverbotService.swift; sourceTree = "<group>"; };
 		036666CE1E65F8DB00508EFD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		036666D31E660C6900508EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -89,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0310C2721FD67A0800C0BDCD /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				0310C2731FD67A1500C0BDCD /* AppDelegate.swift */,
+				0310C2751FD67A2500C0BDCD /* CompositionRoot.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
 		0365BF691E65E90A0039F7CE = {
 			isa = PBXGroup;
 			children = (
@@ -130,14 +135,13 @@
 		0365BF8B1E65E9440039F7CE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0365BF8C1E65E9440039F7CE /* AppDelegate.swift */,
 				036666CE1E65F8DB00508EFD /* Configuration.swift */,
+				0310C2721FD67A0800C0BDCD /* Entry */,
 				036666971E65EB6800508EFD /* Services */,
 				036666951E65EB6800508EFD /* Models */,
 				036666C11E65F0A800508EFD /* Sections */,
 				036666981E65EB6800508EFD /* ViewControllers */,
 				0366669A1E65EB6800508EFD /* Views */,
-				036666961E65EB6800508EFD /* Rx */,
 				0366669C1E65EB7B00508EFD /* Utils */,
 			);
 			path = Sources;
@@ -162,19 +166,9 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		036666961E65EB6800508EFD /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				036666BF1E65F07E00508EFD /* UIViewController+Rx.swift */,
-			);
-			path = Rx;
-			sourceTree = "<group>";
-		};
 		036666971E65EB6800508EFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0366669D1E65EC0300508EFD /* ServiceProvider.swift */,
-				036666CA1E65F41400508EFD /* BaseService.swift */,
 				036666CC1E65F43800508EFD /* CleverbotService.swift */,
 			);
 			path = Services;
@@ -271,7 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Suyeol Jeon";
 				TargetAttributes = {
 					0365BF711E65E90A0039F7CE = {
@@ -319,13 +313,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cleverbot-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BD21E9280D0C1B47C14CC2B /* [CP] Embed Pods Frameworks */ = {
@@ -334,9 +331,46 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cleverbot/Pods-Cleverbot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CGFloatLiteral/CGFloatLiteral.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ManualLayout/ManualLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReusableKit/ReusableKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCodable/RxCodable.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyColor/SwiftyColor.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyImage/SwiftyImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CGFloatLiteral.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ManualLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReusableKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCodable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,20 +399,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0366669E1E65EC0300508EFD /* ServiceProvider.swift in Sources */,
 				036666A81E65EDB200508EFD /* OutgoingMessage.swift in Sources */,
 				036666C51E65F31A00508EFD /* MessageInputBar.swift in Sources */,
-				036666CB1E65F41400508EFD /* BaseService.swift in Sources */,
 				036666C91E65F37800508EFD /* UICollectionView+ScrollToBottom.swift in Sources */,
 				036666B81E65EF9900508EFD /* UICollectionView+CellWidth.swift in Sources */,
 				036666AA1E65EEA000508EFD /* ChatViewController.swift in Sources */,
-				036666C01E65F07E00508EFD /* UIViewController+Rx.swift in Sources */,
 				036666CD1E65F43800508EFD /* CleverbotService.swift in Sources */,
 				036666B71E65EF9900508EFD /* String+BoundingRect.swift in Sources */,
 				036666A21E65ECAC00508EFD /* ModelType.swift in Sources */,
 				036666CF1E65F8DB00508EFD /* Configuration.swift in Sources */,
 				036666A41E65ECF600508EFD /* Message.swift in Sources */,
 				03FD987B1E8C2A6C00F33157 /* Array+SectionModel.swift in Sources */,
+				0310C2741FD67A1500C0BDCD /* AppDelegate.swift in Sources */,
 				036666B01E65EF6600508EFD /* BaseCollectionViewCell.swift in Sources */,
 				036666A61E65ED7800508EFD /* IncomingMessage.swift in Sources */,
 				0366669B1E65EB6800508EFD /* BaseViewController.swift in Sources */,
@@ -389,7 +421,7 @@
 				036666BC1E65EFDB00508EFD /* IncomingMessageCell.swift in Sources */,
 				036666BE1E65EFE200508EFD /* OutgoingMessageCell.swift in Sources */,
 				036666C71E65F32F00508EFD /* String+Localized.swift in Sources */,
-				0365BF921E65E9440039F7CE /* AppDelegate.swift in Sources */,
+				0310C2761FD67A2500C0BDCD /* CompositionRoot.swift in Sources */,
 				036666B61E65EF9900508EFD /* Snap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +459,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -435,7 +469,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -458,12 +496,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -477,7 +516,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -485,7 +526,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -502,10 +547,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -519,7 +565,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.Cleverbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -532,7 +577,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.Cleverbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

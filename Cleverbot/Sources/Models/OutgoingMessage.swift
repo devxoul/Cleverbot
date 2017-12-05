@@ -6,9 +6,7 @@
 //  Copyright © 2017 Suyeol Jeon. All rights reserved.
 //
 
-import ObjectMapper
-
-struct OutgoingMessage {
+struct OutgoingMessage: ModelType {
   var text: String
 
   init(text: String) {

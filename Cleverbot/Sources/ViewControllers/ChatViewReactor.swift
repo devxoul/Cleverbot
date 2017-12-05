@@ -11,7 +11,6 @@ import RxCocoa
 import RxSwift
 
 final class ChatViewReactor: Reactor {
-
   enum Action {
     case send(String)
   }
@@ -25,18 +24,18 @@ final class ChatViewReactor: Reactor {
     var cleverbotState: String? = nil
   }
 
-  fileprivate let provider: ServiceProviderType
   let initialState = State()
+  private let cleverbotService: CleverbotServiceType
 
-  init(provider: ServiceProviderType) {
-    self.provider = provider
+  init(cleverbotService: CleverbotService) {
+    self.cleverbotService = cleverbotService
   }
 
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case let .send(text):
       let outgoingMessage = Observable.just(Message.outgoing(.init(text: text)))
-      let incomingMessage = self.provider.cleverbotService
+      let incomingMessage = self.cleverbotService
         .getReply(text: text, cs: self.currentState.cleverbotState)
         .map { incomingMessage in Message.incoming(incomingMessage) }
       return Observable.of(outgoingMessage, incomingMessage).merge()
@@ -48,7 +47,7 @@ final class ChatViewReactor: Reactor {
     var state = state
     switch mutation {
     case let .addMessage(message):
-      let reactor = MessageCellReactor(provider: self.provider, message: message)
+      let reactor = MessageCellReactor(message: message)
       let sectionItem: ChatViewSectionItem
       switch message {
       case .incoming:

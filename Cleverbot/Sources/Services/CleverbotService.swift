@@ -7,14 +7,13 @@
 //
 
 import Alamofire
-import ObjectMapper
 import RxSwift
 
 protocol CleverbotServiceType {
   func getReply(text: String, cs: String?) -> Observable<IncomingMessage>
 }
 
-final class CleverbotService: BaseService, CleverbotServiceType {
+final class CleverbotService: CleverbotServiceType {
 
   /// Sends the message and returns the observable of received message.
   ///
@@ -33,25 +32,23 @@ final class CleverbotService: BaseService, CleverbotServiceType {
       parameters["cs"] = cs
     }
     return Observable.create { observer in
-      let request = Alamofire.request(urlString, parameters: parameters)
-        .responseString { response in
-          switch response.result {
-          case .success(let jsonString):
-            do {
-              let incomingMessage = try Mapper<IncomingMessage>().map(JSONString: jsonString)
-              observer.onNext(incomingMessage)
-              observer.onCompleted()
-            } catch (let error) {
-              observer.onError(error)
-            }
-          case .failure(let error):
+      let request = Alamofire.request(urlString, parameters: parameters).responseData { response in
+        switch response.result {
+        case let .success(jsonData):
+          do {
+            let incomingMessage = try IncomingMessage(data: jsonData)
+            observer.onNext(incomingMessage)
+            observer.onCompleted()
+          } catch let error {
             observer.onError(error)
           }
+        case let .failure(error):
+          observer.onError(error)
         }
+      }
       return Disposables.create {
         request.cancel()
       }
     }
   }
-
 }

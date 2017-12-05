@@ -78,8 +78,8 @@ class BaseMessageCell: BaseCollectionViewCell, View {
 
   func bind(reactor: MessageCellReactor) {
     reactor.state.map { $0.message }
-      .bindTo(self.messageLabel.rx.text)
-      .addDisposableTo(self.disposeBag)
+      .bind(to: self.messageLabel.rx.text)
+      .disposed(by: self.disposeBag)
     self.setNeedsLayout()
   }
 
