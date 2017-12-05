@@ -1,10 +1,10 @@
 # Cleverbot
 
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 
 [Cleverbot](https://www.cleverbot.com/) for iOS using [ReactorKit](https://github.com/devxoul/ReactorKit).
 
-![cleverbot](https://cloud.githubusercontent.com/assets/931655/23445337/14bc4afc-fe7e-11e6-81ca-7ceb49c16ebe.png)
+![cleverbot](https://user-images.githubusercontent.com/931655/33596175-30185e76-d9de-11e7-9348-b66472b9e582.png)
 
 ## Features
 
@@ -15,8 +15,8 @@
 
 ## Requirements
 
-* iOS 9+
-* Swift 3
+* iOS 11+
+* Swift 4
 * CocoaPods
 * [Cleverbot API Key (free)](https://www.cleverbot.com/api/)
 
