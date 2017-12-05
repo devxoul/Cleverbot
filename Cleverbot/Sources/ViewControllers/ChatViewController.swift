@@ -55,7 +55,7 @@ final class ChatViewController: BaseViewController, View {
 
   init(reactor: Reactor) {
     super.init()
-    self.title = "Cleverbot"
+    self.title = "Cleverbot 🤖"
     self.reactor = reactor
   }
   

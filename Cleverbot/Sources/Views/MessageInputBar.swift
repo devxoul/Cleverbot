@@ -13,19 +13,31 @@ import RxSwift
 
 final class MessageInputBar: UIView {
 
+  // MARK: Constants
+
+  private enum Metric {
+    static let barHeight = 48.f
+    static let barPaddingTopBottom = 7.f
+    static let barPaddingLeftRight = 10.f
+    static let sendButtonLeft = 7.f
+  }
+
   // MARK: UI
 
   fileprivate let toolbar = UIToolbar()
   fileprivate let textView = UITextView().then {
     $0.placeholder = "say_something".localized
+    $0.font = UIFont.systemFont(ofSize: 15)
     $0.isEditable = true
     $0.showsVerticalScrollIndicator = false
+    $0.textContainerInset.left = 8
+    $0.textContainerInset.right = 8
     $0.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.6).cgColor
     $0.layer.borderWidth = 1 / UIScreen.main.scale
-    $0.layer.cornerRadius = 3
+    $0.layer.cornerRadius = Metric.barHeight / 2 - Metric.barPaddingTopBottom
   }
   fileprivate let sendButton = UIButton(type: .system).then {
-    $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)
+    $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
     $0.setTitle("send".localized, for: .normal)
   }
 
@@ -45,15 +57,16 @@ final class MessageInputBar: UIView {
     }
 
     self.textView.snp.makeConstraints { make in
-      make.top.left.equalTo(7)
-      make.right.equalTo(self.sendButton.snp.left).offset(-7)
-      make.bottom.equalTo(-7)
+      make.top.equalTo(Metric.barPaddingTopBottom)
+      make.bottom.equalTo(-Metric.barPaddingTopBottom)
+      make.left.equalTo(Metric.barPaddingLeftRight)
+      make.right.equalTo(self.sendButton.snp.left).offset(-Metric.sendButtonLeft)
     }
 
     self.sendButton.snp.makeConstraints { make in
-      make.top.equalTo(7)
-      make.bottom.equalTo(-7)
-      make.right.equalTo(-7)
+      make.top.equalTo(Metric.barPaddingLeftRight)
+      make.bottom.equalTo(-Metric.barPaddingLeftRight)
+      make.right.equalTo(-Metric.barPaddingLeftRight)
     }
   }
   
@@ -65,9 +78,8 @@ final class MessageInputBar: UIView {
   // MARK: Size
 
   override var intrinsicContentSize: CGSize {
-    return CGSize(width: self.width, height: 44)
+    return CGSize(width: self.width, height: Metric.barHeight)
   }
-
 }
 
 

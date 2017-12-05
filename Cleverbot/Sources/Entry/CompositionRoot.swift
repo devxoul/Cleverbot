@@ -21,6 +21,7 @@ enum CompositionRoot {
     let chatViewReactor = ChatViewReactor(cleverbotService: cleverbotService)
     let chatViewController = ChatViewController(reactor: chatViewReactor)
     let navigationController = UINavigationController(rootViewController: chatViewController)
+    navigationController.navigationBar.prefersLargeTitles = true
 
     // window
     let window = UIWindow(frame: UIScreen.main.bounds)

@@ -35,7 +35,7 @@ class BaseMessageCell: BaseCollectionViewCell, View {
   }
 
   fileprivate struct Font {
-    static let messageLabel = UIFont.systemFont(ofSize: 14)
+    static let messageLabel = UIFont.systemFont(ofSize: 15)
   }
 
 
@@ -60,7 +60,7 @@ class BaseMessageCell: BaseCollectionViewCell, View {
     super.init(frame: frame)
 
     self.bubbleView.image = UIImage.resizable()
-      .corner(radius: 16)
+      .corner(radius: 18)
       .color(appearance.bubbleViewBackgroundColor)
       .image
     self.messageLabel.textColor = appearance.messageLabelTextColor
