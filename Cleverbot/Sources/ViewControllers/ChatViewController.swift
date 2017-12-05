@@ -100,7 +100,7 @@ final class ChatViewController: BaseViewController, View {
       make.edges.equalToSuperview()
     }
     self.messageInputBar.snp.makeConstraints { make in
-      make.left.right.equalTo(0)
+      make.left.right.equalToSuperview()
       make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
     }
   }
@@ -145,7 +145,11 @@ final class ChatViewController: BaseViewController, View {
       .drive(onNext: { [weak self] keyboardVisibleHeight in
         guard let `self` = self, self.didSetupConstraints else { return }
         self.messageInputBar.snp.updateConstraints { make in
-          make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-keyboardVisibleHeight)
+          var offset: CGFloat = -keyboardVisibleHeight
+          if keyboardVisibleHeight > 0 {
+            offset += self.view.safeAreaInsets.bottom
+          }
+          make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(offset)
         }
         self.view.setNeedsLayout()
         UIView.animate(withDuration: 0) {

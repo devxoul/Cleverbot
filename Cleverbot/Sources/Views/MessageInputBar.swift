@@ -40,7 +40,8 @@ final class MessageInputBar: UIView {
     self.addSubview(self.sendButton)
 
     self.toolbar.snp.makeConstraints { make in
-      make.edges.equalTo(0)
+      make.top.left.right.equalToSuperview()
+      make.bottom.equalToSuperview().offset(44) // enlarge background for iPhone X
     }
 
     self.textView.snp.makeConstraints { make in
