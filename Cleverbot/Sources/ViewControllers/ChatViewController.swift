@@ -26,6 +26,14 @@ final class ChatViewController: BaseViewController, View {
     static let messageSectionItemSpacing = 10.f
   }
 
+  private enum Font {
+    static let placeholderLabel = UIFont.boldSystemFont(ofSize: 18)
+  }
+
+  private enum Color {
+    static let placeholderLabelText = 0xCCCCCC.color
+  }
+
   fileprivate struct Reusable {
     static let incomingMessageCell = ReusableCell<IncomingMessageCell>()
     static let outgoingMessageCell = ReusableCell<OutgoingMessageCell>()
@@ -49,6 +57,12 @@ final class ChatViewController: BaseViewController, View {
     $0.register(Reusable.outgoingMessageCell)
   }
   fileprivate let messageInputBar = MessageInputBar()
+  private let placeholderLabel: UILabel = UILabel().then {
+    $0.font = Font.placeholderLabel
+    $0.text = "Say hi 👋"
+    $0.textColor = Color.placeholderLabelText
+    $0.isUserInteractionEnabled = false
+  }
 
 
   // MARK: Initializing
@@ -92,12 +106,16 @@ final class ChatViewController: BaseViewController, View {
     self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset
 
     self.view.addSubview(self.collectionView)
+    self.view.addSubview(self.placeholderLabel)
     self.view.addSubview(self.messageInputBar)
   }
 
   override func setupConstraints() {
     self.collectionView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
+    }
+    self.placeholderLabel.snp.makeConstraints { make in
+      make.center.equalTo(self.collectionView)
     }
     self.messageInputBar.snp.makeConstraints { make in
       make.left.right.equalToSuperview()
@@ -138,6 +156,10 @@ final class ChatViewController: BaseViewController, View {
         // scroll to bottom when receive message only if last content offset was at the bottom
         self?.collectionView.scrollToBottom(animated: true)
       })
+      .disposed(by: self.disposeBag)
+
+    reactor.state.map { $0.sections.first?.items.isEmpty != true }
+      .bind(to: self.placeholderLabel.rx.isHidden)
       .disposed(by: self.disposeBag)
 
     // Keyboard
